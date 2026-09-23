@@ -31,7 +31,7 @@ class TaskController extends Controller
         Task::create($request->all());
 
         return redirect()->route('tasks.index')
-            ->with('success', 'Task created successfully.');
+            ->with('success', 'Tarefa craida com sucesso.');
     }
 
     public function toggle(Task $task)
@@ -40,7 +40,7 @@ class TaskController extends Controller
         $task->save();
 
         return redirect()->route('tasks.index')
-            ->with('success', 'Task status updated successfully.');
+            ->with('success', 'Status da tarefa atualizado com sucesso.');
     }
 
     public function destroy(Task $task)
@@ -48,6 +48,6 @@ class TaskController extends Controller
         $task->delete();
 
         return redirect()->route('tasks.index')
-            ->with('success', 'Task deleted successfully.');
+            ->with('success', 'Tarefa excluída com sucesso.');
     }
 }
